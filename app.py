@@ -10,7 +10,7 @@ app = Flask(__name__)
 # ===== ENV CONFIG =====
 API_KEY = os.getenv("API_KEY")
 BASE_URL = os.getenv("BASE_URL", "https://openrouter.ai/api/v1")
-MODEL = os.getenv("MODEL", "google/gemini-flash-1.5:free")  # ✅ Faster model
+MODEL = os.getenv("MODEL", "meta-llama/llama-4-maverick:free")  # ✅ Faster model
 SITE_URL = os.getenv("SITE_URL", "https://github.com/00x0kafyy/worm-ai")
 SITE_NAME = os.getenv("SITE_NAME", "WormGPT API")
 RENDER_URL = os.getenv("RENDER_EXTERNAL_URL")  # ✅ Add this in Render env vars
