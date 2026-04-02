@@ -8,7 +8,7 @@ services:
       - key: API_KEY
         sync: false
       - key: MODEL
-        value: stepfun/step-3.5-flash:free
+        value: google/gemini-flash-1.5:free
       - key: BASE_URL
         value: https://openrouter.ai/api/v1
     buildCommand: pip install -r requirements.txt
