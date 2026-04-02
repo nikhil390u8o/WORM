@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: worm-api
+    runtime: python
+    repo: https://github.com/YOUR_USERNAME/YOUR_REPO_NAME
+    plan: free
+    envVars:
+      - key: API_KEY
+        sync: false
+      - key: MODEL
+        value: stepfun/step-3.5-flash:free
+      - key: BASE_URL
+        value: https://openrouter.ai/api/v1
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --workers 1 --timeout 60
